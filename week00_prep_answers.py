@@ -42,18 +42,16 @@ print(fibonacci_stop(30))
 
 #%%
 # 5.Logical operators
-def clean_pitch(measurements, status):
-    cleaned_list = []
-    for i in range(len(measurements)):
-        if 0 <= measurements[i] <= 90:
-            cleaned_list.append(measurements[i])
-        elif status[i] > 0:
-            cleaned_list.append(-999)
+def clean_pitch(x,state):
+    clean_pitch=[]
+    for i ,k in zip(x,state):
+        if (i<0 or i>90 ) and k==1:
+            clean_pitch.append(-999)
         else:
-            cleaned_list.append(measurements[i])
-    return cleaned_list
-measurements = [-1,2,6,95]
-status = [1,0,0,0]
-cleaned_measurements = clean_pitch(measurements, status)
-print(cleaned_measurements)
+            clean_pitch.append(i)
+           
+    return clean_pitch
+x=[-1,2,6,95]
+state=[1,0,0,0]
+clean_pitch(x,state)
 # %%

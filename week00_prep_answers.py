@@ -17,11 +17,14 @@ goldilocks (145)
 
 #%%
 # 3. For loops
-def square_list(numbers):
-    return [x ** 2 for x in numbers]
-numbers = [1, 2, 3]
-squared_numbers = square_list(numbers)
-print(squared_numbers)
+def square_list(X):
+    result=[]
+ 
+    for i in X:
+        value=np.sqrt(i)
+        result.append(value)
+ 
+    print(result)
 
 #%%
 # 4. While loops

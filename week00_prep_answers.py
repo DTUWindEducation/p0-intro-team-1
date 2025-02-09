@@ -30,19 +30,15 @@ square=square_list([1,4,9])
 #%%
 # 4. While loops
 def fibonacci_stop(max_value):
-    if max_value < 1:
-        return []
-    
-    fib_sequence = [1, 1]
-    while True:
-        next_value = fib_sequence[-1] + fib_sequence[-2]
-        if next_value > max_value:
-            break
-        fib_sequence.append(next_value)
-    
-    return fib_sequence
-max_value = 10
-print(fibonacci_stop(max_value))  
+    fib = [1, 1]
+    while (n := fib[-1] + fib[-2]) <= max_value:
+        fib.append(n) # append the new value to the list
+    return fib if max_value >= 1 else []
+ 
+#fib[-1]: This accesses the last element in the list.
+#fib[-2]: This accesses the second-to-last element in the list.
+# call the function where max_value = 30
+print(fibonacci_stop(30))  
 
 #%%
 # 5.Logical operators

@@ -25,6 +25,7 @@ def square_list(X):
         result.append(value)
  
     print(result)
+square=square_list([1,4,9])
 
 #%%
 # 4. While loops

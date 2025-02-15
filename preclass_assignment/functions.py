@@ -1,13 +1,56 @@
+#%%
 #1. write a simple function
-greet('world')
+def greet(name):
+        print(f"Hello, {name}!")
 
+
+#%%
 # 2. If/else statements
-goldilocks (145)
+def goldilocks(length):
+        if 140<length<150:
+            print("Just right :)")
+        if  length<140:
+            print ("Too small!")
+        else:
+            print ('Too large!')
+
+
+#%%
 # 3. For loops
-square=square_list([1,4,9])
+import numpy as np
+def square_list(X):
+    result=[]
+ 
+    for i in X:
+        value=np.sqrt(i)
+        result.append(value)
+ 
+    print(result)
+
+
+#%%
 # 4. While loops
-print(fibonacci_stop(30))  
+def fibonacci_stop(max_value):
+    fib = [1, 1]
+    while (n := fib[-1] + fib[-2]) <= max_value:
+        fib.append(n) # append the new value to the list
+    return fib if max_value >= 1 else []
+ 
+#fib[-1]: This accesses the last element in the list.
+#fib[-2]: This accesses the second-to-last element in the list.
+# call the function where max_value = 30
+
+
+#%%
 # 5.Logical operators
-x=[-1,2,6,95]
-state=[1,0,0,0]
-clean_pitch(x,state)
+def clean_pitch(x,state):
+    clean_pitch=[]
+    for i ,k in zip(x,state):
+        if (i<0 or i>90 ) and k==1:
+            clean_pitch.append(-999)
+        else:
+            clean_pitch.append(i)
+           
+    return clean_pitch
+
+# %%

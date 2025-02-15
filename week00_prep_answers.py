@@ -17,6 +17,7 @@ goldilocks (145)
 
 #%%
 # 3. For loops
+import numpy as np
 def square_list(X):
     result=[]
  

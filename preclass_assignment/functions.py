@@ -9,10 +9,11 @@ def greet(name):
 def goldilocks(length):
         if 140<length<150:
             print("Just right :)")
-        if  length<140:
+        elif  length<140:
             print ("Too small!")
         else:
             print ('Too large!')
+    
 
 
 #%%
@@ -22,10 +23,13 @@ def square_list(X):
     result=[]
  
     for i in X:
-        value=np.sqrt(i)
+        value=np.sqrt(i) # convert the result to an integer
         result.append(value)
+
+    print(result)  # Debug print statement
+    return result # return the result instead of printing it
  
-    print(result)
+# print(result)
 
 
 #%%
@@ -34,6 +38,8 @@ def fibonacci_stop(max_value):
     fib = [1, 1]
     while (n := fib[-1] + fib[-2]) <= max_value:
         fib.append(n) # append the new value to the list
+
+    print(fib) # Debug print statement
     return fib if max_value >= 1 else []
  
 #fib[-1]: This accesses the last element in the list.
@@ -50,7 +56,8 @@ def clean_pitch(x,state):
             clean_pitch.append(-999)
         else:
             clean_pitch.append(i)
-           
+    
+    print(clean_pitch) # Debug print statement       
     return clean_pitch
 
 # %%

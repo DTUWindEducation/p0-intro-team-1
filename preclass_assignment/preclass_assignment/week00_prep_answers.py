@@ -54,5 +54,5 @@ def clean_pitch(x,state):
     return clean_pitch
 x=[-1,2,6,95]
 state=[1,0,0,0]
-print(clean_pitch(x,state))
+clean_pitch(x,state)
 # %%
